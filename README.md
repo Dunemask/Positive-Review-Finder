@@ -31,6 +31,7 @@ This project is built using nodejs version 15.1.0
 
 * Open a terminal or command prompt after installing nodejs 
 * Ensure you are on version 15.1.0 using the command "node --version"
-* Type the command npm start to run the program
+* Type the command "npm install" to install dependencies
+* Type the command "npm start" to run the program
 
 
