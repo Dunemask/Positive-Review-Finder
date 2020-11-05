@@ -13,7 +13,7 @@
 
 ## Judging Criteria
 
-    1 Must come from the only positive reviews list
+    Must come from the only positive reviews list
     Each 5 star earns them 5 points
     Each keyword earns it points dependant on the keyword (Words & points defined in keyword.json)
 
