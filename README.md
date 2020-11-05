@@ -29,9 +29,12 @@ https://www.dealerrater.com/dealer/McKaig-Chevrolet-Buick-A-Dealer-For-The-Peopl
 This project is built using nodejs version 15.1.0
 (How to [Install Node](https://nodejs.org/en/download/))
 
-* Open a terminal or command prompt after installing nodejs 
+* Install nodejs
+* Download and extract this repository
+* Open a terminal or command prompt in the downloaded folder 
 * Ensure you are on version 15.1.0 using the command "node --version"
 * Type the command "npm install" to install dependencies
 * Type the command "npm start" to run the program
+
 
 
