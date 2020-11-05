@@ -1,0 +1,24 @@
+{
+  "name": "positive-review-finder",
+  "version": "1.0.0",
+  "description": "Simple Project to scrape DealerRater.com and find positive reviews",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dunemask/Positive-Review-Finder.git"
+  },
+  "author": "Elijah Parker (Dunemask)",
+  "license": "LGPL-2.1",
+  "bugs": {
+    "url": "https://github.com/dunemask/Positive-Review-Finder/issues"
+  },
+  "homepage": "https://github.com/dunemask/Positive-Review-Finder#readme",
+  "dependencies": {
+    "got": "^11.8.0",
+    "jsdom": "16.4"
+  }
+}
