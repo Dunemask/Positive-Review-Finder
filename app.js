@@ -4,7 +4,7 @@ const fs = require('fs');
 const { JSDOM } = jsdom;
 const keywordJson = JSON.parse(fs.readFileSync('keywords.json'));
 const starRatingNames =["Customer Service","Quality Of Work","Friendliness","Pricing","Overall Experience"]
-const priorityCount = 3;
+const priorityCount = 3; /*Number of major threats displayed*/
 /*Function used to format the .review-entry html, turn it into an easily redable json object*/
 function formatEntry(reviewEntry){
   /*Get written review based on the class tag review-content*/
@@ -14,7 +14,7 @@ function formatEntry(reviewEntry){
   let starRatings = reviewEntry.querySelectorAll('.rating-static-indv');
   let stars = {};
   /*Iterate through each div with star rating, and test to see if it's a 5 star*/
-  /* **NOTE rating-50 is what was used to identify a 5 star review */
+  /* **NOTE rating-50 is the class used to identify a 5 star review */
   for(let i=0;i<starRatings.length;i++){
     let isFiveStar = starRatings[0].classList.contains("rating-50");
     /*Assign a rating to the star to the form: {'Rating Specification':isFiveStar}*/
@@ -70,7 +70,7 @@ async function judgeEntries(endPage){
     for(let i=0;i<pageReviews.length;i++){
         judgedEntries.push(pageReviews[i]);
     }
-    }
+  }
   return judgedEntries;
 }
 /*Compare function used by the sort property of arrays*/
@@ -88,6 +88,7 @@ function comparePoints(prop) {
 judgeEntries(5).then(function(entries){
   entries.sort(comparePoints("points"));
   console.log("Threats by priority: \n ");
+  let threatCount = priorityCount>(entries.length-1)? entries.length-1:priorityCount;
   /*Iterate through the number of threats we want to reveal and displays the threat level, as well as the review, and the user*/
   for(let i =1;i<=priorityCount;i++){
       let selectedEntry = entries[entries.length-i];
